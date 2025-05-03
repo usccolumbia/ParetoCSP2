@@ -1,0 +1,10 @@
+tensorflow==2.14.*
+ase
+pymatgen
+m3gnet
+chgnet
+pyxtal
+pandas
+pymoo
+configparser
+argparse

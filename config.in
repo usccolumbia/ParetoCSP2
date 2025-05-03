@@ -1,0 +1,47 @@
+[BASE]
+# The chemical formula of the compound, element symbol + count, i.e., Ga1 Ni3, Sr1 W1 N1 O2
+compound = Sr1 Ti1 O3
+# energy model
+energy_model = M3GNet
+# experiment mode: csp (crystal structure prediction) or poly (polymorphic structure prediction)
+mode = csp
+# Output path, use to save the results.
+output_path = ./results
+# Load model and predict using GPU
+use_gpu = True
+
+[LATTICE]
+# 1) if space_group<=1 : without symmetry
+# 2) else : with symmetry
+#    i) [A, B] -> A<=space_group<=B;
+#    ii) (A, B, C ...) -> space_group=A,B,C...;
+#    iii) A -> space_group=A
+space_group = [1, 230]
+# Lattice a,b,c (unit: Angstrom):
+#    1) [A, B] -> A<=Lattice<=B;
+#    2) (A, B, C ...) -> Lattice=A,B,C...;
+#    3) A -> Lattice=A
+lattice_a = [2, 30]
+lattice_b = [2, 30]
+lattice_c = [2, 30]
+# Lattice alpha,beta,gamma (unit: degree):
+#    1) [A, B] -> A<=Lattice<=B;
+#    2) (A, B, C ...) -> Lattice=A,B,C...;
+#    3) A -> Lattice=A
+lattice_alpha = [20, 160]
+lattice_beta = [20, 160]
+lattice_gamma = [20, 160]
+
+[PROGRAM]
+# Search algorithm: 1) 'paretocsp2' (ParetoCSP2)
+algorithm = paretocsp2
+# The population size in the genetic algorithm
+pop = 100
+# The number of distinct space group structures to track
+num_track = 10
+# The number of structures to track from same space group, usually 1 for regular CSP, 2-5 for polymorphism CSP
+num_copy = 1
+# The maximum steps of program runs
+max_step = 500
+# Specify the random seed, -1 is None
+rand_seed = 7
