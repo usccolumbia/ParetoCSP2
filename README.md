@@ -12,6 +12,8 @@ Crystalline materials can form different structural arrangements (i.e. polymorph
 
 However, effective crystal structure prediction (CSP) algorithms for inorganic polymorph structures remain limited. We propose **ParetoCSP2**, a  multi-objective genetic algorithm for polymorphism CSP that incorporates an adaptive space group diversity control technique and the sustainable age-fitness Pareto optimized evolutionary mechanism, preventing over-representation of any single space group in the population guided by a neural network interatomic potential. Using an improved population initialization method and performing iterative structure relaxation, ParetoCSP2 not only alleviates premature convergence but also achieves improved convergence speed.
 
+![](flowchart.png)
+
 # Table of Contents
 * [Necessary Installations](#installation)
 * [How to run](#usage)
